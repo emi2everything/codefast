@@ -2,26 +2,31 @@ package com.hphan.recursive.easy;
 
 public class DecodeMessage
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
-	String input = "3[a]2[bc]";
-	System.out.println(decodeString(input));
+	String input = "2[b2[a]]";
+	System.out.println(decodeStringUsingStack(input));
     }
 
-    public static String decodeString(String s) 
+    public static String decodeStringUsingStack(String s)
+    {
+	return s;
+    }
+
+    public static String decodeString(String s)
     {
 	StringBuilder out = new StringBuilder();
 	int i = 0;
 	while (i < s.length())
 	{
 	    String noLoop = "";
-	    
+
 	    if (Character.isDigit(s.charAt(i)))
 	    {
 		noLoop += s.charAt(i);
-		while(Character.isDigit(s.charAt(i+1)))
+		while (Character.isDigit(s.charAt(i + 1)))
 		{
-		    noLoop+=s.charAt(i+1);
+		    noLoop += s.charAt(i + 1);
 		    i++;
 		}
 		int bIndex = i + 2;
@@ -48,8 +53,7 @@ public class DecodeMessage
 
 		i = bIndex;
 
-	    } 
-	    else
+	    } else
 	    {
 		out.append(String.valueOf(s.charAt(i)));
 		i++;

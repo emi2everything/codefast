@@ -1,7 +1,6 @@
 package com.hphan.tree.common;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import com.ly.utils.java.CommonUtils;
