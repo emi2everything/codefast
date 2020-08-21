@@ -1,6 +1,8 @@
 package com.hphan.linkedlist;
 
 /**
+ * 
+ * @author Ly
  * The point is the only give reference of the node they want to delete 
  *
  */
