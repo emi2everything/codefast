@@ -1,4 +1,4 @@
-package com.hphan.array.easy;
+package com.hphan.array;
 
 /**
  * Be careful how you copy element of array

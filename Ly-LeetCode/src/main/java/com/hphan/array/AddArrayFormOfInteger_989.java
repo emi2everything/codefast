@@ -1,4 +1,4 @@
-package com.hphan.array.easy;
+package com.hphan.array;
 
 import java.util.ArrayList;
 import java.util.Collections;

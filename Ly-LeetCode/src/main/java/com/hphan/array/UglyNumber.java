@@ -1,4 +1,4 @@
-package com.hphan.array.easy;
+package com.hphan.array;
 
 public class UglyNumber
 {
