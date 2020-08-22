@@ -1,8 +1,9 @@
-package com.hphan.linkedlist;
+package com.hphan.tree.binarysearchtree;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.hphan.linkedlist.ListNode;
 import com.hphan.tree.common.TreeNode;
 
 /**
