@@ -1,7 +1,8 @@
 package com.hphan.string;
 
 /**
- * Careful: What if either delete left or right can make current checking char equal? Which one should I do? What if only one will lead to correct answer?
+ * Careful: What if either delete left or right can make current checking char equal? 
+ * Which one should I do? What if only one will lead to correct answer?
  * Better check the next char as well. It is required.
  * @author Ly
  *
