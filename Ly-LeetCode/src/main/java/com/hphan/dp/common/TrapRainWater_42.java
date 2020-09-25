@@ -16,9 +16,44 @@ public class TrapRainWater_42
     }
 
     /**
-     * DP Solution
+     * 2pointer
      */
     public int trap(int[] height)
+    {
+	if (height.length < 3)
+	    return 0;
+
+	int p1 = 0, p2 = height.length - 1, sum = 0, maxLeft = 0, maxRight = 0;
+	boolean left = true;
+
+	while (p1 < p2)
+	{
+	    if (left)
+		sum += Math.max(0, Math.min(maxLeft, maxRight) - height[p1]);
+	    else
+		sum += Math.max(0, Math.min(maxLeft, maxRight) - height[p2]);
+
+	    maxRight = Math.max(height[p2], maxRight);
+	    maxLeft = Math.max(height[p1], maxLeft);
+
+	    if (height[p1] > height[p2])
+	    {
+		p2--;
+		left = false;
+	    } else
+	    {
+		p1++;
+		left = true;
+	    }
+	}
+	return sum;
+    }
+    
+    
+    /**
+     * DP Solution
+     */
+    public int trap2Pass(int[] height)
     {
 	// edge
 	if (height.length == 0)
