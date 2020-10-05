@@ -50,4 +50,29 @@ public class TwoSum_1
 	}
 	return out;
     }
+    
+    /**
+     * 2 pointers
+     */
+    public int[] twoSum3(int[] numbers, int target) 
+    {
+        int p1 = 0;
+        int p2 = numbers.length - 1;
+        int[] out = new int[2];
+            
+        while (p1 < p2)
+        {
+            int tmpSum = numbers[p1] + numbers[p2];
+            if (tmpSum == target)
+            {
+                out[0] = p1+1;
+                out[1] = p2+1;
+            }
+            if (tmpSum > target)
+                p2--;
+            else 
+                p1++;
+        }
+        return out;
+    }
 }
